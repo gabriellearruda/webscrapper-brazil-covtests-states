@@ -1,4 +1,4 @@
-# Webscrapper Brazil SARS-Cov-1 Tests by State
+# WebScraper Testes SARS-Cov-1 por Estado - Webscrapper Brazil SARS-Cov-1 Tests by State
 
 ##### Esse código foi implementado em 25 de agosto de 2020, mudancas no front do site podem comprometer o funcionamento do código.
 ##### This code was implemented on August 25, 2020, changes in the front of the site may compromise the code's functioning.
