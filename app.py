@@ -69,10 +69,8 @@ def raspagem(url):
     return df
 
   
-url = 'http://plataforma.saude.gov.br/coronavirus/virus-respiratorios/'
-df = raspagem(url)
-df['exames'] = df.apply(fix_exames, axis=1)
-df['exames'] = df['exames'].astype(int)
+df = raspagem('http://plataforma.saude.gov.br/coronavirus/virus-respiratorios/')
+df['exames'] = df.apply(fix_exames, axis=1).astype(int)
 dftotal = df.groupby(['UF']).agg({"exames": "sum"})
 dftotal.rename(columns={'exames': 'total'}, inplace=True)
 df = df.merge(dftotal, on=['UF'], sort=True, how='left')
